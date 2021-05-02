@@ -37,14 +37,14 @@
         width: 100%;
         font-size: 1.4em;
         margin: 0;
-        color: var(--green);
+        color: var(--time);
         text-align: center;
     }
     .date{
         font-size: 0.6em;
         margin: 0;
         text-align: center;
-        color: var(--orange);
+        color: var(--date);
     }
 </style>
 

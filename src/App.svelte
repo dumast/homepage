@@ -1,12 +1,14 @@
 <script>
 	import Clock from './Components/Clocks.svelte'
 	import Icons from './Components/Icons.svelte';
-	import Weather from './Components/Weather.svelte'
-	let userName = "Terence";
+	import Weather from './Components/Weather.svelte';
+	import * as configure from './configure.json'
+	import './Colors/theme1.css';
 </script>
 
 <main>
-	<h1 class="mainTitle">WELCOME, {userName.toUpperCase()}</h1>
+	<h1 class="mainTitle">WELCOME, {configure.default.name.toUpperCase()} 
+	</h1>
 	<div class="container">
 		<Clock/>
 		<Icons/>
@@ -19,7 +21,7 @@
 		font-size: 1em;
 		text-align: center;
 		width: 100%;
-		color: #BF616A;
+		color: var(--greetings);
 	}
 	.container{
 		display: flex;

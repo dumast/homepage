@@ -26,19 +26,19 @@
 	}
 
 	.clock-face {
-		stroke: var(--purple);
+		stroke: var(--clock);
 		fill: none;
         stroke-width: 3;
 	}
 
 	.hour {
-		stroke: var(--purple);
+		stroke: var(--clock);
         stroke-width: 3;
         stroke-linecap: round;
 	}
 
 	.minute {
-		stroke: var(--purple);
+		stroke: var(--clock);
         stroke-width: 3;
         stroke-linecap: round;
 	}

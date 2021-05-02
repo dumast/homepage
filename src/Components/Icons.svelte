@@ -1,6 +1,5 @@
 <script>
-    import App from '../App.svelte';
-import * as apps from '../apps.json'
+    import * as apps from '../apps.json'
 
     console.log(apps.default);
     const change = (array) => {
@@ -35,16 +34,25 @@ import * as apps from '../apps.json'
         color: #2E3440;
     }
 
+    .link:hover{
+        cursor: pointer;
+    }
+
     .app{
         position: relative;
         display: inline-block;
         place-content: center;
         font-size: 300px;
         border-radius: 20px;
-        background-color: var(--blue);
+        background-color: var(--cardBackground);
         margin: 20px;
         width: 400px;
         height: 400px;
+        transition: 0.2s;
+    }
+
+    .app:hover{
+        background-color: var(--temperature);
     }
 
     .svg {
@@ -55,20 +63,20 @@ import * as apps from '../apps.json'
 <div class="container">
     {#if apps.default.length>6}
         {#each apps.default.slice(0,5) as app}
-            <a href = {app.url}><div class="app">
-                {#if ".svg" in app.logo}
-                    <img src = {app.logo} alt = {app.logo}>
+            <div class="app"><a class="link" href = {app.url}>
+                {#if app.logo.search(".svg")!=-1}
+                    <img src = "/images/{app.logo}" class = "svg" alt= {app.logo}>
                 {:else}
                     {app.logo}
                 {/if}
-                </div></a>
+            </a></div>
         {/each}
-        <div class="app" on:click={next}>...</div>
+        <div class="app" on:click={next}><a class = "link">...</a></div>
     {:else}
         {#each apps.default as app}
             <div class="app"><a class="link" href = {app.url}>
                 {#if app.logo.search(".svg")!=-1}
-                    <img src = {`/images/${app.logo}`} class = "svg" alt= {app.logo}>
+                    <img src = "/images/{app.logo}" class = "svg" alt= {app.logo}>
                 {:else}
                     {app.logo}
                 {/if}
