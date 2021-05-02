@@ -3,7 +3,7 @@
 	import Icons from './Components/Icons.svelte';
 	import Weather from './Components/Weather.svelte';
 	import * as configure from './configure.json'
-	import './Colors/theme1.css';
+	import './Colors/theme0.css';
 </script>
 
 <main>

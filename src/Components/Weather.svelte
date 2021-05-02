@@ -50,6 +50,9 @@
     .icon {
         width: 100%;
     }
+    .city{
+        color: var(--time);
+    }
     .temperature{
         font-size: 1.4em;
         bottom: 100px;
@@ -60,5 +63,6 @@
 
 <div class="container">
     <div><img class = "icon" src = "/Icons/{weather.iconId}.png" alt = {weather.description}></div>
+    <div class="city">{configure.default.city}</div>
     <div class="temperature">{weather.temperature.value} °{tempUnit}</div>
 </div>
