@@ -1,30 +1,30 @@
 <script>
-	export let name;
+	import Clock from './Components/Clocks.svelte'
+	import Icons from './Components/Icons.svelte';
+	import Weather from './Components/Weather.svelte'
+	let userName = "Terence";
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1 class="mainTitle">WELCOME, {userName.toUpperCase()}</h1>
+	<div class="container">
+		<Clock/>
+		<Icons/>
+		<Weather/>
+	</div>
 </main>
 
 <style>
-	main {
+	.mainTitle{
+		font-size: 1em;
 		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		width: 100%;
+		color: #BF616A;
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.container{
+		display: flex;
+		flex-wrap: wrap;
+		place-items: center;
+		place-content: center;
 	}
 </style>
