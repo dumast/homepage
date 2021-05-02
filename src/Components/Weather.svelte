@@ -10,9 +10,9 @@
         iconId: '',
     };
 
-    weather.temperature.unit = 'celcius';
+    weather.temperature.unit = `${configure.default.unit}`;
 
-    let tempUnit = 'C';
+    let tempUnit = `${configure.default.tempUnit}`;
     const KELVIN = 273.15;
     // Use your own key for the Weather, Get it here: https://openweathermap.org/
     const key = '769925d257f18ce1ee003dd268b9a91b' // get the key from the .env file you set up
@@ -30,7 +30,7 @@
         .then(function (data) {
         let celsius = Math.floor(data.main.temp - KELVIN);
         weather.temperature.value =
-            tempUnit == 'C' ? celsius : (celsius * 9) / 5 + 32;
+            tempUnit == 'C' ? celsius : Math.floor((celsius * 9) / 5 + 32);
         weather.description = data.weather[0].description;
         weather.iconId = data.weather[0].icon;
         })}

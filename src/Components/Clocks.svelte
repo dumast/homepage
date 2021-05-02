@@ -51,6 +51,5 @@
 <div class="container">
     <Clock/>
     <h2 class="time">{hours}:{minutes}</h2>
-    <p class="date">
-        {months}/{days}/{years}</p>
+    <p class="date">{months}/{days}/{years}</p>
 </div>

@@ -1,4 +1,6 @@
 {
     "name": "Terence",
-    "city": "Houston"
+    "city": "Houston",
+    "unit": "farenheit",
+    "tempUnit": "C"
 }
