@@ -2,7 +2,6 @@
     import * as apps from '../apps.json'
 
     const change = (array) => {
-        console.log(array)
         const first = array[0];
         array.shift();
         array.push(first);

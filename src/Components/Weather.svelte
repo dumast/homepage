@@ -14,7 +14,8 @@
     let tempUnit = `${configure.default.tempUnit}`;
     const KELVIN = 273.15;
     // Use your own key for the Weather, Get it here: https://openweathermap.org/
-    const key = "769925d257f18ce1ee003dd268b9a91b" // get the key from the .env file you set up
+
+    const key = __myapp.env.API_KEY // get the key from the .env file you set up
     // Set Position function
     setPosition();
 
