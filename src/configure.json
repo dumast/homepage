@@ -1,6 +1,5 @@
 {
     "name": "Terence",
     "city": "Houston",
-    "unit": "farenheit",
     "tempUnit": "C"
 }
